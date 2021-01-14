@@ -1,3 +1,4 @@
+'''Module for naughts-and-crosses game.'''
 import random
 from collections import Counter
 
@@ -13,7 +14,7 @@ def create_board():
 def place(board, player, position):
     if board[position] == 0:
         board[position] = player
-    
+
 
 #exercise 3
 def possibilities(board):
@@ -28,15 +29,6 @@ def random_place(board, player):
         position = random.choice(selection)
         place(board, player, position)
     return board
-
-
-#exercise 5
-random.seed(1)
-board = create_board()
-
-for i in range(3):
-    for player in [1,2]:
-        random_place(board, player)
 
 
 #exercise 6
