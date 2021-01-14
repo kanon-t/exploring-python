@@ -1,13 +1,13 @@
 '''Module for naughts-and-crosses game.'''
 import random
-from collections import Counter
 
 import numpy as np
 
 
 #exercise 1
 def create_board():
-    return np.zeros((3,3), dtype = int)
+    '''Creates a 3x3 naughts-and-crosses board.'''
+    return  np.zeros((3,3), dtype = int)
 
 
 #exercise 2
@@ -18,8 +18,8 @@ def place(board, player, position):
 
 #exercise 3
 def possibilities(board):
-    x, y = np.where(board == 0)
-    return [(x[i], y[i]) for i in range(len(x))]
+    x_coord, y_coord = np.where(board == 0)
+    return [(x_coord[i], y_coord[i]) for i in range(len(x_coord))]
 
 
 #exercise 4
