@@ -25,7 +25,6 @@ possibilities(board)
 import random 
 random.seed(1)
 
-# write your code here!
 def random_place(board, player):
     selection = possibilities(board)
     if selection:
@@ -40,7 +39,6 @@ random_place(board, 2)
 random.seed(1)
 board = create_board()
 
-# write your code here!
 for i in range(3):
     for player in [1,2]:
         random_place(board, player)
@@ -51,7 +49,6 @@ print(board)
 #exercise 6
 def row_win(board, player):
     return np.any(np.all(board==player, axis=1))
-
 
 row_win(board, 1)
 
